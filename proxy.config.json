@@ -1,0 +1,10 @@
+[
+    {
+      "context": ["/GeoCMS", "/geocms"],
+      "target": "http://fenhu.cityfun.com.cn",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  ]
+  

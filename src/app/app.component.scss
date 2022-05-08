@@ -1,0 +1,100 @@
+@import "../media-queries.scss";
+$greenFilter: #40bfff; // 绿色滤镜
+$borderDefault: #dddddd;
+$shadowDefault: #d3d1d1;
+hr {
+  border: 0;
+  height: 1px !important;
+  // background-color: $greenFilter;
+  background-color: $borderDefault;
+}
+.top {
+  // border-bottom: 1px solid $greenFilter; // $borderDefault
+  border-bottom: 1px solid $borderDefault;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  & :not(:last-child) {
+    padding: 8px 0px;
+  }
+  .midden {
+    width: 300px;
+    // margin-left: 100px;
+  }
+  .right {
+    display: flex;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .item {
+      display: flex;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: #1890ff;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.container {
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .item {
+    @include md{
+      flex: 1 0 40%;
+    }
+    @include lg{
+      flex: 1 0 40%;
+    }
+    @include xl{
+      flex: 1 0 40%;
+    }
+    padding: 20px;
+    border-radius: 5px;
+    // box-shadow: 0px 0px 7px 0px $greenFilter;
+    box-shadow: 0px 0px 7px 0px $shadowDefault; // $shadowDefault
+    // border: solid 1px $greenFilter;
+    border: solid 1px $borderDefault; // $borderDefault
+    .title {
+      margin-bottom: 6px;
+      .caption {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .description {
+      margin-top: 8px;
+      max-height: 460px;
+      overflow: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .top {
+    flex-direction: column;
+  }
+  .midden {
+    margin-left: 0px;
+  }
+  // .container {
+  //   flex-direction: column;
+  // }
+}
+// 解决因为图片无法自适应缩小导致的页面布局异常的bug！
+::ng-deep img{
+  width: 100%;
+  display: block;
+}

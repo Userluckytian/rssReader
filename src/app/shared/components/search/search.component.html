@@ -1,0 +1,6 @@
+<nz-form-item>
+  <nz-form-control nzHasFeedback nzErrorTip="输入格式错误!">
+    <input pattern="{{httpPattern}}" nz-input  [(ngModel)]="rssUrl" (keyup.enter)="getRssData()" (ngModelChange)="getRssData()"
+      placeholder="请输入RSS订阅地址，按enter键执行搜索" #name="ngModel" required />
+  </nz-form-control>
+</nz-form-item>
