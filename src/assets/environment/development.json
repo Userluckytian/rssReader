@@ -1,0 +1,46 @@
+{
+    "debugging": true,
+    "development": {
+        "des": "开发环境",
+        "baseUrl": "http://192.168.2.82",
+        "apiBaseMapURL": "http://192.168.2.82",
+        "apiImageMapURL": "http://192.168.2.82"
+    },
+    "production": {
+        "des": "生产环境",
+        "baseUrl": "http://221.224.136.227",
+        "apiBaseMapURL": "http://221.224.136.227",
+        "apiImageMapURL": "http://221.224.136.227"
+    },
+    "login": {
+        "validLogin": {
+            "type": "post",
+            "des": "登录用户名密码验证接口",
+            "url": "{{baseUrl}}/geocms/api/admin/auth/Login"
+        },
+        "authInfo": {
+            "type": "get",
+            "des": "登录用户名密码验证接口",
+            "url": "{{baseUrl}}/geocms/api/admin/auth/AuthInfo"
+        }
+    },
+    "base": {
+        "layoutMenu": {
+            "type": "get",
+            "des": "登陆后的菜单列表项",
+            "url": "./assets/config/menuLists/layoutMenu.json"
+        }
+    },
+    "map": {
+        "iquery": {
+            "type": "iquery",
+            "des": "i查询接口",
+            "url": "/GeoCMS/v1/cf/rest/services/DataService/DB/45ddcd3a-108f-4108-b671-c869eed29fc6/info"
+        },
+        "sewagePipe": {
+            "type": "get",
+            "des": "污水管线接口数据",
+            "url": "/GeoCMS/v1/cf/rest/services/MapService/VT/2425189f-416e-44d1-b975-7ed5c612a679/info"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "NewsFeeds": [
+        {
+            "label": "Html5Weekly",
+            "value": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
+        },
+        {
+            "label": "CSSWeekly",
+            "value": "http://feeds.feedburner.com/CSS-Weekly?format=xml"
+        },
+        {
+            "label": "JsWeekly",
+            "value": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
+        },
+        {
+            "label": "Web Tools Weekly",
+            "value": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d"
+        },
+        {
+            "label": "乔什W科莫",
+            "value": "https://www.joshwcomeau.com/rss.xml"
+        },
+        {
+            "label": "cnbeta",
+            "value": "https://rss.cnbeta.com/rss"
+        },
+        {
+            "label": "IT之家",
+            "value": "http://www.ithome.com/rss/"
+        },
+        {
+            "label": "CSS-tricks",
+            "value": "https://css-tricks.com/feed/"
+        }
+    ],
+    "from": "https://github.com/foru17/front-end-collect",
+    "des": "前端开发相关的优秀网站、博客、以及活跃开发者"
+}

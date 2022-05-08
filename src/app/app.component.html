@@ -1,0 +1,61 @@
+<div class="pancel">
+    <div class="top">
+        <div class="left">
+            <span>订阅源：</span>
+            <app-select [selectOptions]="NewsFeedList" (selectItem)="changeNews($event)"></app-select>
+        </div>
+        <div class="midden">
+            <app-search (outputAddress)="showCustomRssNews($event)"></app-search>
+        </div>
+        <div class="right">
+            <div class="item" (click)="openNewTab()">
+                <i nz-icon nzType="link" nzTheme="outline"></i>
+                <a #aLinkDom>点我获取常用RSS源</a>
+            </div>
+            <nz-divider nzType="vertical"></nz-divider>
+            <div class="item" (click)="toggleTheme()">
+                <i class="trigger" nz-icon nzType="skin" nzTheme="outline"></i>
+                <span>点我切换暗黑模式</span>
+            </div>
+        </div>
+    </div>
+    <app-loading [isLoading]="isLoading">
+        <div class="container">
+            <ng-container *ngIf="NewsList.length; else noDataTemplate">
+                <div class="item" *ngFor="let item of NewsList">
+                    <div class="title">
+                        <div class="caption">
+                            {{item.title}}
+                            <nz-divider nzType="vertical"></nz-divider>
+                            <a href="{{item.link}}" target="_blank">Read on the web</a>
+                        </div>
+                        <div class="date">发布时间：{{item.pubDate | changeDate}}</div>
+                    </div>
+                    <hr>
+                    <div class="description">
+                        <app-content [contentHTML]="item.description"></app-content>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #noDataTemplate>
+                <app-Empty></app-Empty>
+            </ng-template>
+        </div>
+    </app-loading>
+</div>
+
+
+
+
+
+<!-- [ngStyle]="{'background-image': 'url(' + item?.thumbnail + ')', 'filter': 'blur(1px)'}" -->
+<!-- 
+    看了一种布局：
+    先是一张卡片，
+    br
+    再是标题
+    br
+    再是内容（内容控制为两行，超出部分为...省略。overflow：hidden）
+    br
+    再是更新时间（2分钟前） 等信息
+ -->

@@ -1,0 +1,5 @@
+<nz-select [(ngModel)]="currentSelectItem" (ngModelChange)="ngSelectChange($event)">
+  <ng-container *ngFor="let item of selectOptions">
+    <nz-option [nzValue]="item.value" nzLabel="{{item.label}}"></nz-option>
+  </ng-container>
+</nz-select>
