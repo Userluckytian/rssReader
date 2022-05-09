@@ -41,7 +41,13 @@ export class AppComponent {
     this.isLoading = true;
     this.rssService.getRssFeedsList().then((list: any) => {
       this.NewsFeedList = list.NewsFeeds;
-      this.getRssDataByLink(this.NewsFeedList[0].value);
+      let useLink = '';
+      if(sessionStorage.getItem('rssLink')){
+        useLink = sessionStorage.getItem('rssLink') as string;
+      }else{
+        useLink = this.NewsFeedList[0].value;
+      }
+      this.getRssDataByLink(useLink);
     });
   }
 
