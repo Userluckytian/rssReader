@@ -23,6 +23,9 @@ hr {
   }
   .midden {
     width: 300px;
+    @include phone{
+      width: 100%;
+    }
     // margin-left: 100px;
   }
   .right {
@@ -47,20 +50,14 @@ hr {
 }
 .container {
   gap: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   .item {
-    @include md{
-      flex: 1 0 40%;
-    }
-    @include lg{
-      flex: 1 0 40%;
-    }
-    @include xl{
-      flex: 1 0 40%;
-    }
+    flex: 1 0 40%;
     padding: 20px;
     border-radius: 5px;
     // box-shadow: 0px 0px 7px 0px $greenFilter;
@@ -89,9 +86,9 @@ hr {
   .midden {
     margin-left: 0px;
   }
-  // .container {
-  //   flex-direction: column;
-  // }
+  .container {
+    flex-direction: column;
+  }
 }
 // 解决因为图片无法自适应缩小导致的页面布局异常的bug！
 ::ng-deep img{
