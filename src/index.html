@@ -1,13 +1,20 @@
 <!doctype html>
 <html lang="en">
-  
+
 <head>
   <meta charset="utf-8">
-  <title>Angular</title>
+  <title>rss阅读器</title>
   <base href="/">
-  <meta name="referrer" content="no-referrer" /> <!--页面头部添加(图片资源访问失败的处理方法)-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer" />
+  <!--页面头部添加(图片资源访问失败的处理方法)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- /*
+    下面的代码意思是，如果屏幕宽度小于400像素（max-device-width: 400px），就加载tinyScreen.css文件。
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />
+    如果屏幕宽度在400像素到600像素之间，则加载smallScreen.css文件。
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 400px) and (max-device-width: 600px)" href="smallScreen.css" />
+    */  -->
 </head>
 <body>
   <app-root></app-root>
