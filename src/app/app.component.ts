@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MessageService } from './base/common-service/message/message.service';
 import { RssService } from './base/common-service/rss/rss.service';
 import { ThemeService } from './base/core-net/theme/theme.service';
+import { SearchComponent } from './shared/components/search/search.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent {
   NewsFeedList: Array<any> = []; // 新闻feed列表
   isLoading: boolean = false; // 是否正在加载？
   @ViewChild('downfile') aLinkDom!: ElementRef;
+  @ViewChild('searchComponent') searchComponent!: SearchComponent;
   constructor(
     private themeService: ThemeService,
     private rssService: RssService,
@@ -42,9 +44,9 @@ export class AppComponent {
     this.rssService.getRssFeedsList().then((list: any) => {
       this.NewsFeedList = list.NewsFeeds;
       let useLink = '';
-      if(sessionStorage.getItem('rssLink')){
+      if (sessionStorage.getItem('rssLink')) {
         useLink = sessionStorage.getItem('rssLink') as string;
-      }else{
+      } else {
         useLink = this.NewsFeedList[0].value;
       }
       this.getRssDataByLink(useLink);
@@ -78,6 +80,9 @@ export class AppComponent {
    * @memberof HomeComponent
    */
   changeNews(rssLink: string) {
+    if (this.searchComponent) {
+      this.searchComponent.rssUrl = '';
+    }
     this.isLoading = true;
     this.getRssDataByLink(rssLink);
   }
