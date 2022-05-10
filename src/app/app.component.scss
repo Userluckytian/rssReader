@@ -95,3 +95,8 @@ hr {
   width: 100%;
   display: block;
 }
+// 解决因为table表格无法自适应缩小导致的页面布局异常的bug！
+::ng-deep table{
+  width: 100%;
+  display: block;
+}
