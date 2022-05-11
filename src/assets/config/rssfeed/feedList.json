@@ -1,24 +1,48 @@
 {
     "NewsFeeds": [
         {
-            "label": "Html5Weekly",
+            "label": "Html5 Weekly",
             "value": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
         },
         {
-            "label": "CSSWeekly",
+            "label": "CSS Weekly",
             "value": "http://feeds.feedburner.com/CSS-Weekly?format=xml"
         },
         {
-            "label": "JsWeekly",
+            "label": "Js Weekly",
             "value": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
+        },
+        {
+            "label": "Node Weekly",
+            "value": "https://cprss.s3.amazonaws.com/www.nodeweekly.com.xml"
+        },
+        {
+            "label": "WebOpsWeekly",
+            "value": "https://cprss.s3.amazonaws.com/weekly.statuscode.com.xml"
+        },
+        {
+            "label": "Web Design Weekly",
+            "value": "http://web-design-weekly.com/feed/"
+        },
+        {
+            "label": "mobile dev weekly",
+            "value": "https://cprss.s3.amazonaws.com/mobiledevweekly.com.xml"
         },
         {
             "label": "Web Tools Weekly",
             "value": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d"
         },
         {
+            "label": "DB Weekly",
+            "value": "https://cprss.s3.amazonaws.com/dbweekly.com.xml"
+        },
+        {
             "label": "Josh Comeau",
             "value": "https://www.joshwcomeau.com/rss.xml"
+        },
+        {
+            "label": "齐舞周刊",
+            "value": "https://weekly.75.team/rss"
         },
         {
             "label": "cnbeta",
@@ -27,8 +51,22 @@
         {
             "label": "CSS-tricks",
             "value": "https://css-tricks.com/feed/"
+        },
+        {
+            "label": "China Daily News",
+            "value": "http://www.chinadaily.com.cn/rss/cndy_rss.xml"
+        },
+        {
+            "label": "China News",
+            "value": "http://www.chinadaily.com.cn/rss/china_rss.xml"
+        },
+        {
+            "label": "Sport News",
+            "value": "http://www.chinadaily.com.cn/rss/sports_rss.xml"
         }
     ],
     "from": "https://github.com/foru17/front-end-collect",
+    "from1": "http://www.chinadaily.com.cn/rss/index.html",
+    "from2": "https://www.designzillas.com/blog/10-rss-feeds-web-developers-should-subscribe-to",
     "des": "前端开发相关的优秀网站、博客、以及活跃开发者"
 }
