@@ -92,6 +92,11 @@ hr {
 }
 // 解决因为图片无法自适应缩小导致的页面布局异常的bug！
 ::ng-deep img{
-  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+// 解决因为table表格无法自适应缩小导致的页面布局异常的bug！
+::ng-deep table{
+  max-width: 100%;
   display: block;
 }

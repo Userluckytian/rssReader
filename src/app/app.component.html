@@ -5,7 +5,7 @@
             <app-select [selectOptions]="NewsFeedList" (selectItem)="changeNews($event)"></app-select>
         </div>
         <div class="midden">
-            <app-search (outputAddress)="showCustomRssNews($event)"></app-search>
+            <app-search (outputAddress)="showCustomRssNews($event)" #searchComponent></app-search>
         </div>
         <div class="right">
             <div class="item" (click)="openNewTab()">
