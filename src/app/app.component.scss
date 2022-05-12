@@ -92,11 +92,11 @@ hr {
 }
 // 解决因为图片无法自适应缩小导致的页面布局异常的bug！
 ::ng-deep img{
-  max-width: 100%;
+  max-width: 100%; // 图片必须设置最大宽度为100%，因为有些图片可能宽度没那么大，强行100%会被拉伸,效果不好！
   display: block;
 }
 // 解决因为table表格无法自适应缩小导致的页面布局异常的bug！
 ::ng-deep table{
-  max-width: 100%;
+  width: 100%;  // 表格的宽度必须设置为！100%.不可以是max-width属性！
   display: block;
 }
