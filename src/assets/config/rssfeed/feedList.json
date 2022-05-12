@@ -14,11 +14,7 @@
         },
         {
             "label": "Node Weekly",
-            "value": "https://cprss.s3.amazonaws.com/www.nodeweekly.com.xml"
-        },
-        {
-            "label": "WebOpsWeekly",
-            "value": "https://cprss.s3.amazonaws.com/weekly.statuscode.com.xml"
+            "value": "https://cprss.s3.amazonaws.com/nodeweekly.com.xml"
         },
         {
             "label": "Web Design Weekly",
@@ -37,8 +33,16 @@
             "value": "https://cprss.s3.amazonaws.com/dbweekly.com.xml"
         },
         {
+            "label": "Status Code Weekly",
+            "value": "https://cprss.s3.amazonaws.com/weekly.statuscode.com.xml"
+        },
+        {
             "label": "Josh Comeau",
             "value": "https://www.joshwcomeau.com/rss.xml"
+        },
+        {
+            "label": "CSS-tricks",
+            "value": "https://css-tricks.com/feed/"
         },
         {
             "label": "齐舞周刊",
@@ -47,26 +51,8 @@
         {
             "label": "cnbeta",
             "value": "https://rss.cnbeta.com/rss"
-        },
-        {
-            "label": "CSS-tricks",
-            "value": "https://css-tricks.com/feed/"
-        },
-        {
-            "label": "China Daily News",
-            "value": "http://www.chinadaily.com.cn/rss/cndy_rss.xml"
-        },
-        {
-            "label": "China News",
-            "value": "http://www.chinadaily.com.cn/rss/china_rss.xml"
-        },
-        {
-            "label": "Sport News",
-            "value": "http://www.chinadaily.com.cn/rss/sports_rss.xml"
         }
     ],
     "from": "https://github.com/foru17/front-end-collect",
-    "from1": "http://www.chinadaily.com.cn/rss/index.html",
-    "from2": "https://www.designzillas.com/blog/10-rss-feeds-web-developers-should-subscribe-to",
     "des": "前端开发相关的优秀网站、博客、以及活跃开发者"
 }
