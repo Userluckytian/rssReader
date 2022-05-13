@@ -54,5 +54,13 @@
         }
     ],
     "from": "https://github.com/foru17/front-end-collect",
-    "des": "前端开发相关的优秀网站、博客、以及活跃开发者"
+    "des": "前端开发相关的优秀网站、博客、以及活跃开发者",
+    "waitingOpen":[
+        {
+            "title": "制作视差 SVG 风景 眼前一亮",
+            "Rss": "https://alistairshepherd.uk/feed.xml",
+            "link-1": "https://alistairshepherd.uk/writing/parallax-svg-landscape-1/",
+            "link-2": "https://alistairshepherd.uk/writing/parallax-svg-landscape-2/"
+        }
+    ]
 }

@@ -69,7 +69,7 @@ export class AppComponent {
     this.isLoading = false;
     this.webSiteTitle = rssJsonData.feed.title;
     this.NewsList = rssJsonData.items;
-    console.log(this.NewsList);
+    // console.log(this.NewsList);
   }
 
 
