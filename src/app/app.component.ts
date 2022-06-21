@@ -16,6 +16,7 @@ export class AppComponent {
   isLoading: boolean = false; // 是否正在加载？
   @ViewChild('downfile') aLinkDom!: ElementRef;
   @ViewChild('searchComponent') searchComponent!: SearchComponent;
+  timer: any;
   constructor(
     private themeService: ThemeService,
     private rssService: RssService,
@@ -24,6 +25,10 @@ export class AppComponent {
 
   ngOnInit() {
     this.getRssData();
+  }
+
+  ngAfterViewInit() {
+    this.getCountData();
   }
 
   /**
@@ -107,6 +112,26 @@ export class AppComponent {
     // let linkDom = this.aLinkDom.nativeElement;
     // linkDom.href = "https://www.yuque.com/pocv40/alcg2a/zgnuwd";
     // linkDom.click();
+  }
+
+  /**
+   * 获取统计数据
+   *
+   * @memberof AppComponent
+   */
+  getCountData() {
+    this.timer = setInterval(() => {
+      const dom = document.getElementById('busuanzi_value_site_pv');
+      const num = dom?.innerHTML || '';
+      console.log('🚀 ~ num', num);
+      console.log('🚀 ~ num', parseInt(num));
+      
+      // console.log(parseInt(null) === 'NAN');
+      if (parseInt(num)) {
+        clearInterval(this.timer);
+        (document.getElementById('counts') as any).style.display = 'block';
+      }
+    }, 500);
   }
 
 }

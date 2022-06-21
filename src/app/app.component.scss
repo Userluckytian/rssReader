@@ -78,6 +78,13 @@ hr {
     }
   }
 }
+.bottom{
+  min-height: 40px;
+  background-color: #efefef;
+  display: none;
+  text-align: center;
+  padding: 1rem;
+}
 
 @media screen and (max-width: 1100px) {
   .top {
@@ -87,6 +94,13 @@ hr {
     margin-left: 0px;
   }
   .container {
+    flex-direction: column;
+  }
+  .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     flex-direction: column;
   }
 }
