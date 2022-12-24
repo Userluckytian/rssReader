@@ -2,12 +2,14 @@
 $greenFilter: #40bfff; // 绿色滤镜
 $borderDefault: #dddddd;
 $shadowDefault: #d3d1d1;
+
 hr {
   border: 0;
   height: 1px !important;
   // background-color: $greenFilter;
   background-color: $borderDefault;
 }
+
 .top {
   // border-bottom: 1px solid $greenFilter; // $borderDefault
   border-bottom: 1px solid $borderDefault;
@@ -18,22 +20,28 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+
   & :not(:last-child) {
     padding: 8px 0px;
   }
+
   .midden {
     width: 300px;
-    @include phone{
+
+    @include phone {
       width: 100%;
     }
+
     // margin-left: 100px;
   }
+
   .right {
     display: flex;
     -webkit-align-items: center;
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+
     .item {
       display: flex;
       -webkit-align-items: center;
@@ -41,6 +49,7 @@ hr {
       -ms-flex-align: center;
       align-items: center;
       color: #1890ff;
+
       &:hover {
         cursor: pointer;
         opacity: 0.8;
@@ -48,6 +57,7 @@ hr {
     }
   }
 }
+
 .container {
   gap: 20px;
   row-gap: 20px;
@@ -56,6 +66,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   .item {
     flex: 1 0 40%;
     padding: 20px;
@@ -64,13 +75,16 @@ hr {
     box-shadow: 0px 0px 7px 0px $shadowDefault; // $shadowDefault
     // border: solid 1px $greenFilter;
     border: solid 1px $borderDefault; // $borderDefault
+
     .title {
       margin-bottom: 6px;
+
       .caption {
         display: flex;
         align-items: center;
       }
     }
+
     .description {
       margin-top: 8px;
       max-height: 460px;
@@ -79,24 +93,45 @@ hr {
   }
 }
 
+.transalte {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+::ng-deep .goog-te-banner-frame {
+  visibility: none !important;
+}
+::ng-deep .goog-te-gadget-simple {
+  display: flex;
+  height: 25px;
+}
+::ng-deep .goog-te-menu-value:last-child {
+  display: none !important;
+}
+
 @media screen and (max-width: 1100px) {
   .top {
     flex-direction: column;
   }
+
   .midden {
     margin-left: 0px;
   }
+
   .container {
     flex-direction: column;
   }
 }
+
 // 解决因为图片无法自适应缩小导致的页面布局异常的bug！
-::ng-deep img{
+::ng-deep img {
   max-width: 100%; // 图片必须设置最大宽度为100%，因为有些图片可能宽度没那么大，强行100%会被拉伸,效果不好！
   display: block;
 }
+
 // 解决因为table表格无法自适应缩小导致的页面布局异常的bug！
-::ng-deep table{
-  width: 100%;  // 表格的宽度必须设置为！100%.不可以是max-width属性！
+::ng-deep table {
+  width: 100%; // 表格的宽度必须设置为！100%.不可以是max-width属性！
   display: block;
 }
