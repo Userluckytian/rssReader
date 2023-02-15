@@ -49,6 +49,10 @@
             "value": "https://weekly.75.team/rss"
         },
         {
+            "label": "code maze Weekly",
+            "value": "https://code-maze.com/feed/"
+        },
+        {
             "label": "cnbeta",
             "value": "https://rss.cnbeta.com/rss"
         }
