@@ -92,6 +92,13 @@ hr {
     }
   }
 }
+.bottom{
+  min-height: 40px;
+  background-color: #efefef;
+  display: none;
+  text-align: center;
+  padding: 1rem;
+}
 
 .transalte {
   position: fixed;
@@ -120,6 +127,13 @@ hr {
   }
 
   .container {
+    flex-direction: column;
+  }
+  .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     flex-direction: column;
   }
 }
