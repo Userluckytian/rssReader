@@ -8,6 +8,8 @@ import { AppRoutes } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { zorroModule } from './third_lib/Zorro/zorro_Modules';
 import { AppInitializerProvider } from './base/core-net/theme/app-initializer.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,13 @@ import { AppInitializerProvider } from './base/core-net/theme/app-initializer.se
     SharedModule,
     ...zorroModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     AppInitializerProvider,
