@@ -28,7 +28,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    this.getCountData();
+    // this.getCountData();
   }
 
   /**
@@ -123,10 +123,6 @@ export class AppComponent {
     this.timer = setInterval(() => {
       const dom = document.getElementById('busuanzi_value_site_pv');
       const num = dom?.innerHTML || '';
-      console.log('🚀 ~ num', num);
-      console.log('🚀 ~ num', parseInt(num));
-      
-      // console.log(parseInt(null) === 'NAN');
       if (parseInt(num)) {
         clearInterval(this.timer);
         (document.getElementById('counts') as any).style.display = 'block';
