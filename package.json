@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --port 4410 --proxy-config proxy.config.json --open",
+    "start": "ng serve --host 0.0.0.0 --port 4410  --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
