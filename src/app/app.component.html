@@ -1,5 +1,13 @@
 <div class="pancel">
-    <div class="top">
+    <div class="more" (click)="mobileShowMore = !mobileShowMore" [ngClass]="{'hasShadow':!mobileShowMore}">
+        <svg t="1677666764260" class="icon" viewBox="0 0 1462 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="4583" width="24" height="24">
+            <path
+                d="M73.142857 0h1316.571429a73.142857 73.142857 0 0 1 0 146.285714H73.142857a73.142857 73.142857 0 1 1 0-146.285714z m0 438.857143h1316.571429a73.142857 73.142857 0 0 1 0 146.285714H73.142857a73.142857 73.142857 0 1 1 0-146.285714z m0 438.857143h1316.571429a73.142857 73.142857 0 0 1 0 146.285714H73.142857a73.142857 73.142857 0 0 1 0-146.285714z"
+                fill="#353535" p-id="4584"></path>
+        </svg>
+    </div>
+    <div class="top" [style.display]="mobileShowMore ? 'flex' : 'none' ">
         <div class="left">
             <span>订阅源：</span>
             <app-select [selectOptions]="NewsFeedList" (selectItem)="changeNews($event)"></app-select>

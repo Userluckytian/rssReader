@@ -16,12 +16,12 @@ export class SearchComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    if (sessionStorage.getItem('rssLink')) {
-      this.rssUrl = sessionStorage.getItem('rssLink') as string;
+    if (sessionStorage.getItem('enterRssLink')) {
+      this.rssUrl = sessionStorage.getItem('enterRssLink') as string;
     }
     this.rssFeedObser.pipe(debounceTime(1000))
       .subscribe((rssLink: string) => {
-        sessionStorage.setItem('rssLink', rssLink.trim());
+        sessionStorage.setItem('enterRssLink', rssLink.trim());
         this.outputAddress.emit(rssLink.trim())
       })
   }

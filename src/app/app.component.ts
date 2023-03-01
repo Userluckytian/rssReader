@@ -14,6 +14,7 @@ export class AppComponent {
   NewsList: Array<any> = []; // 通过RSS获取的新闻列表
   NewsFeedList: Array<any> = []; // 新闻feed列表
   isLoading: boolean = false; // 是否正在加载？
+  mobileShowMore: boolean = true;
   @ViewChild('downfile') aLinkDom!: ElementRef;
   @ViewChild('searchComponent') searchComponent!: SearchComponent;
   timer: any;
@@ -85,6 +86,7 @@ export class AppComponent {
    * @memberof HomeComponent
    */
   changeNews(rssLink: string) {
+    sessionStorage.setItem('rssLink', rssLink);
     if (this.searchComponent) {
       this.searchComponent.rssUrl = '';
     }
@@ -129,5 +131,6 @@ export class AppComponent {
       }
     }, 500);
   }
+
 
 }
