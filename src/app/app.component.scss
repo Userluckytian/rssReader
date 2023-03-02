@@ -113,6 +113,23 @@ hr {
   padding: 1rem;
 }
 
+.transalte {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+::ng-deep .goog-te-banner-frame {
+  visibility: none !important;
+}
+::ng-deep .goog-te-gadget-simple {
+  display: flex;
+  height: 25px;
+}
+::ng-deep .goog-te-menu-value:last-child {
+  display: none !important;
+}
+
 @media screen and (max-width: 1100px) {
   .more{
     display: flex;

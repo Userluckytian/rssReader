@@ -48,9 +48,9 @@
                 "src/styles/themes"
               ]
             },
-            "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "scripts": [
+              "src/assets/lib/googleTransalte.js"
+            ]
           },
           "configurations": {
             "production": {
