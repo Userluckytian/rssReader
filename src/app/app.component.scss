@@ -18,6 +18,7 @@ hr {
   align-items: center;
 }
 
+
 .top {
   // border-bottom: 1px solid $greenFilter; // $borderDefault
   position: sticky;
@@ -113,10 +114,15 @@ hr {
   padding: 1rem;
 }
 
+.dark{
+  background-color: #030303;
+}
+
 .transalte {
   position: fixed;
   top: 20px;
   left: 20px;
+  z-index: 2;
 }
 
 ::ng-deep .goog-te-banner-frame {
@@ -129,6 +135,7 @@ hr {
 ::ng-deep .goog-te-menu-value:last-child {
   display: none !important;
 }
+
 
 @media screen and (max-width: 1100px) {
   .more{
@@ -146,6 +153,9 @@ hr {
     flex-direction: column;
     top: 40px;
     box-shadow: 0px 6px 7px 0px #00000024;
+  }
+  .dark{
+    background-color: #030303;
   }
 
   .midden {

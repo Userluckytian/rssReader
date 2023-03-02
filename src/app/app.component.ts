@@ -18,6 +18,7 @@ export class AppComponent {
   @ViewChild('downfile') aLinkDom!: ElementRef;
   @ViewChild('searchComponent') searchComponent!: SearchComponent;
   timer: any;
+  theme: string | undefined;
   constructor(
     private themeService: ThemeService,
     private rssService: RssService,
@@ -38,8 +39,11 @@ export class AppComponent {
    * @memberof WelcomeComponent
    */
   toggleTheme() {
-    this.themeService.toggleTheme().then();
+    this.themeService.toggleTheme().then((params: any) => {
+      this.theme = params?.theme;
+    });
   }
+  
   /**
    * 获取RSS数据
    *
@@ -75,7 +79,6 @@ export class AppComponent {
     this.isLoading = false;
     this.webSiteTitle = rssJsonData.feed.title;
     this.NewsList = rssJsonData.items;
-    console.log(this.NewsList);
     this.addTranslatePagePlugin()
   }
 
