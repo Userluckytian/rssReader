@@ -33,6 +33,10 @@
             "value": "https://cprss.s3.amazonaws.com/dbweekly.com.xml"
         },
         {
+            "label": "Postgre Weekly",
+            "value": "https://postgresweekly.com/rss/"
+        },
+        {
             "label": "Status Code Weekly",
             "value": "https://cprss.s3.amazonaws.com/weekly.statuscode.com.xml"
         },
