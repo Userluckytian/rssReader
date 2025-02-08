@@ -10,16 +10,29 @@ hr {
   background-color: $borderDefault;
 }
 
+.more{
+  background-color: #fff;
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
 .top {
   // border-bottom: 1px solid $greenFilter; // $borderDefault
-  border-bottom: 1px solid $borderDefault;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #dddddd;
   display: flex;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  background: #fff;
+  z-index: 1;
+  width: 100%;
+  // box-shadow: 0px -1px 10px 0px #ffffff;
+
 
   & :not(:last-child) {
     padding: 8px 0px;
@@ -92,7 +105,8 @@ hr {
     }
   }
 }
-.bottom{
+
+.bottom {
   min-height: 40px;
   background-color: #efefef;
   display: none;
@@ -100,10 +114,15 @@ hr {
   padding: 1rem;
 }
 
+.dark{
+  background-color: #030303;
+}
+
 .transalte {
   position: fixed;
   top: 20px;
   left: 20px;
+  z-index: 2;
 }
 
 ::ng-deep .goog-te-banner-frame {
@@ -117,9 +136,26 @@ hr {
   display: none !important;
 }
 
+
 @media screen and (max-width: 1100px) {
+  .more{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    height: 40px;
+    padding: 0rem 1rem;
+    z-index: 1;
+  }
+  .hasShadow{
+    box-shadow: 0px 6px 7px 0px #00000024;
+  }
   .top {
     flex-direction: column;
+    top: 40px;
+    box-shadow: 0px 6px 7px 0px #00000024;
+  }
+  .dark{
+    background-color: #030303;
   }
 
   .midden {
@@ -129,13 +165,20 @@ hr {
   .container {
     flex-direction: column;
   }
-  .bottom{
+
+  .bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-direction: column;
   }
+}
+@media screen and (min-width: 1101px) {
+  .top {
+    display: flex !important;
+  }
+
 }
 
 // 解决因为图片无法自适应缩小导致的页面布局异常的bug！

@@ -14,9 +14,11 @@ export class AppComponent {
   NewsList: Array<any> = []; // 通过RSS获取的新闻列表
   NewsFeedList: Array<any> = []; // 新闻feed列表
   isLoading: boolean = false; // 是否正在加载？
+  mobileShowMore: boolean = true;
   @ViewChild('downfile') aLinkDom!: ElementRef;
   @ViewChild('searchComponent') searchComponent!: SearchComponent;
   timer: any;
+  theme: string | undefined;
   constructor(
     private themeService: ThemeService,
     private rssService: RssService,
@@ -28,7 +30,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    this.getCountData();
+    // this.getCountData();
   }
 
   /**
@@ -37,8 +39,11 @@ export class AppComponent {
    * @memberof WelcomeComponent
    */
   toggleTheme() {
-    this.themeService.toggleTheme().then();
+    this.themeService.toggleTheme().then((params: any) => {
+      this.theme = params?.theme;
+    });
   }
+  
   /**
    * 获取RSS数据
    *
@@ -74,7 +79,6 @@ export class AppComponent {
     this.isLoading = false;
     this.webSiteTitle = rssJsonData.feed.title;
     this.NewsList = rssJsonData.items;
-    console.log(this.NewsList);
     this.addTranslatePagePlugin()
   }
 
@@ -104,6 +108,7 @@ export class AppComponent {
    * @memberof HomeComponent
    */
   changeNews(rssLink: string) {
+    sessionStorage.setItem('rssLink', rssLink);
     if (this.searchComponent) {
       this.searchComponent.rssUrl = '';
     }
@@ -142,15 +147,12 @@ export class AppComponent {
     this.timer = setInterval(() => {
       const dom = document.getElementById('busuanzi_value_site_pv');
       const num = dom?.innerHTML || '';
-      console.log('🚀 ~ num', num);
-      console.log('🚀 ~ num', parseInt(num));
-      
-      // console.log(parseInt(null) === 'NAN');
       if (parseInt(num)) {
         clearInterval(this.timer);
         (document.getElementById('counts') as any).style.display = 'block';
       }
     }, 500);
   }
+
 
 }

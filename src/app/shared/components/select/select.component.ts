@@ -16,7 +16,11 @@ export class SelectComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       if (this.selectOptions && this.selectOptions.length > 0) {
-        this.currentSelectItem = this.selectOptions[0].value;
+        if (sessionStorage.getItem('rssLink')) {
+          this.currentSelectItem = sessionStorage.getItem('rssLink') as string;
+        } else {
+          this.currentSelectItem = this.selectOptions[0].value;
+        }
       }
     }, 500);
   }

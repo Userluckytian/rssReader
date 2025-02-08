@@ -50,9 +50,7 @@
             },
             "scripts": [
               "src/assets/lib/googleTransalte.js"
-            ],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            ]
           },
           "configurations": {
             "production": {
@@ -101,7 +99,8 @@
               "browserTarget": "my-app:build:production"
             },
             "development": {
-              "browserTarget": "my-app:build:development"
+              "browserTarget": "my-app:build:development",
+              "proxyConfig": "proxy.config.json"
             }
           },
           "defaultConfiguration": "development"
