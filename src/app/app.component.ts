@@ -79,26 +79,9 @@ export class AppComponent {
     this.isLoading = false;
     this.webSiteTitle = rssJsonData.feed.title;
     this.NewsList = rssJsonData.items;
-    this.addTranslatePagePlugin()
   }
 
 
-  googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      autoDisplay: false,
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      includedLanguages: 'zh-CN,en',
-    }, 'google_translate_element');
-  }
-
-  addTranslatePagePlugin() {
-    setTimeout(() => {
-      console.log('执行！');
-      this.googleTranslateElementInit();
-    }, 2000);
-
-  }
 
 
   /**
