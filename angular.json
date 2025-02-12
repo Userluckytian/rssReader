@@ -47,10 +47,7 @@
               "includePaths": [
                 "src/styles/themes"
               ]
-            },
-            "scripts": [
-              "src/assets/lib/googleTransalte.js"
-            ]
+            }
           },
           "configurations": {
             "production": {

@@ -3,9 +3,7 @@
 收集了一些前端常浏览的技术博客。
         
     前端路漫漫，慢慢慢慢慢~
-# 统计数据
 
-![Alt](https://repobeats.axiom.co/api/embed/760b507e9b1b9e3532a66fd10a2b43daec957793.svg "Repobeats analytics image")
 # 部署 
 使用 [Vercel](https://vercel.com/) 部署的项目。
 
@@ -17,4 +15,9 @@ Vercel很棒，基本支持全框架模板。超级易上手，值得推荐，�
 
 [![ONMML9.gif](https://s1.ax1x.com/2022/05/10/ONMML9.gif)](https://imgtu.com/i/ONMML9)
 
+# 调试
+
+1. ` node : >16.x.x `
+
+2. ` npx npm install && npm run start `
 
