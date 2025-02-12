@@ -9,6 +9,10 @@
             "value": "http://feeds.feedburner.com/CSS-Weekly?format=xml"
         },
         {
+            "label": "html-css Weekly",
+            "value": "https://html-css-tip-of-the-week.netlify.app/rss.xml"
+        },
+        {
             "label": "Js Weekly",
             "value": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
         },
