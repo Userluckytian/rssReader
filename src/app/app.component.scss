@@ -102,6 +102,7 @@ hr {
       margin-top: 8px;
       max-height: 460px;
       overflow: auto;
+      overscroll-behavior-y: contain;
     }
   }
 }
